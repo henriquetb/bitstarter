@@ -3,7 +3,9 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World2!!');
+  index = 'Hello';
+  var buff = buffer(index, "utf-8");
+  response.send(buff.toString());
 });
 
 var port = process.env.PORT || 5000;
