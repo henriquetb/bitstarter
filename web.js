@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   index = 'Hello';
-  var buff = buffer(index, "utf-8");
+  var buff = new Buffer(index, "utf-8");
   response.send(buff.toString());
 });
 
